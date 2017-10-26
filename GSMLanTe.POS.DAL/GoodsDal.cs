@@ -27,24 +27,24 @@ namespace GSMLanTe.POS.DAL
         {
 
             StringBuilder sb = new StringBuilder();
-            sb.Append("update  gsm_goods as g,gsm_member_price as p set");
+            sb.Append("update  gsm_goods as g  set ");
             sb.Append("g.goods_name=@GoodsName,");
             sb.Append("g.goods_number=@GoodsNumber,");
             sb.Append("g.tienda_number=@TiendaNumber,");
-            sb.Append("g.shop_price=@ShopPrice,");
-            sb.Append("g.user_price=@UserPrice,");
-            sb.Append("g.goods_name=@GoodsName");
-            sb.Append("where g.goods_id=p.goods.id and g.goods_id=@GoodsId and g.goods_sn=@GoodsNo");
+            sb.Append("g.shop_price=@ShopPrice ");
+           // sb.Append("p.user_price=@UserPrice,");
+            //sb.Append("g.goods_name=@GoodsName");
+            sb.Append("where g.goods_id=@GoodsId and g.goods_sn=@GoodsNo");
             string sql = sb.ToString();
             MySqlParameter[] pars = {
                 new MySqlParameter("@GoodsId",goods.Id),
                 new MySqlParameter("@GoodsNo",goods.No),
                 new MySqlParameter("@GoodsName",goods.Name),
-                new MySqlParameter("@",goods.PCS),
-                new MySqlParameter("@",goods.StorePCS),
-                new MySqlParameter("@",goods.Price),
-                new MySqlParameter("@",goods.VipPrice),
-                new MySqlParameter("@",goods.WholesalePrice),
+                new MySqlParameter("@GoodsNumber",goods.PCS),
+                new MySqlParameter("@TiendaNumber",goods.StorePCS),
+                new MySqlParameter("@ShopPrice",goods.Price),
+                new MySqlParameter("@UserPrice",goods.VipPrice),
+                //new MySqlParameter("@UserPrice",goods.WholesalePrice),
             };
             var result = MySqlHelper.ExecuteNonQuery(AppSetting.ServerConnectionString, sql, pars);
 

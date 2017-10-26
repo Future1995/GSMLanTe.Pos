@@ -133,20 +133,37 @@ namespace GSMLanTe.POS
         {
             if (dgvWebGoods.Rows.Count > 0)
             {
-                Goods goods = new Goods
+                Goods goods = new Goods();
+                //{
+                //    Id = int.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[0].Value.ToString()),
+                //    No = this.dgvWebGoods.Rows[e.RowIndex].Cells[1].Value.ToString(),
+                //    Name = this.dgvWebGoods.Rows[e.RowIndex].Cells[2].Value.ToString(),
+                //    PCS = int.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[3].Value.ToString()),
+                //    StorePCS = int.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[4].Value.ToString()),
+                //    Price = float.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[5].Value.ToString()),
+                //    VipPrice = float.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[6].Value.ToString()),
+                //    WholesalePrice = float.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[7].Value.ToString()),
+                //};
+               
+                string wholesalePrice = this.dgvWebGoods.Rows[e.RowIndex].Cells[7].Value.ToString();
+                goods.Id = int.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[0].Value.ToString());
+                goods.No = this.dgvWebGoods.Rows[e.RowIndex].Cells[1].Value.ToString();
+                goods.Name = this.dgvWebGoods.Rows[e.RowIndex].Cells[2].Value.ToString();
+                goods.PCS = int.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[3].Value.ToString());
+                goods.StorePCS = int.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[4].Value.ToString());
+                goods.Price = float.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[5].Value.ToString());
+                goods.VipPrice = float.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[6].Value.ToString());
+                if (wholesalePrice == "")
                 {
-                    Id = int.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[0].Value.ToString()),
-                    No = this.dgvWebGoods.Rows[e.RowIndex].Cells[1].Value.ToString(),
-                    Name = this.dgvWebGoods.Rows[e.RowIndex].Cells[2].Value.ToString(),
-                    PCS = int.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[3].Value.ToString()),
-                    StorePCS = int.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[4].Value.ToString()),
-                    Price = float.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[5].Value.ToString()),
-                    VipPrice = float.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[6].Value.ToString()),
-                    WholesalePrice = float.Parse(this.dgvWebGoods.Rows[e.RowIndex].Cells[7].Value.ToString()),
-                };
+                    goods.WholesalePrice = null;
+                }
+                else {
+                    goods.WholesalePrice =  float.Parse(wholesalePrice);
+                }
                 //调用服务更新数据
-              var result=  goodsService.UpdateGoodsInfo(goods);
-                if (!result) {
+                var result = goodsService.UpdateGoodsInfo(goods);
+                if (!result)
+                {
                     MessageBox.Show("更新数据库失败，出现异常");
                 }
             }

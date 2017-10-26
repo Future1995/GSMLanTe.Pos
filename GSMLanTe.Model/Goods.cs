@@ -24,6 +24,6 @@ namespace GSMLanTe.Model
         /// <summary>
         /// 批发价
         /// </summary>
-        public float WholesalePrice { get; set; }
+        public float? WholesalePrice { get; set; }
     }
 }
