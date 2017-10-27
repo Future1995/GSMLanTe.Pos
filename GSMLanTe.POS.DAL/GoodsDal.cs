@@ -17,7 +17,13 @@ namespace GSMLanTe.POS.DAL
             //string sql = "SELECT * FROM `gsm_goods` ORDER BY `gsm_goods`.`goods_name` ASC, `gsm_goods`.`goods_sn` ASC";
             //string sql = "SELECT gsm_goods.goods_id, gsm_goods.goods_sn, gsm_goods.goods_name, gsm_goods.goods_number, gsm_goods.tienda_number, gsm_goods.shop_price, gsm_member_price.user_price, gsm_goods.goods_img FROM `gsm_goods`,`gsm_member_price` order by gsm_goods.goods_id asc";
             //string sql = "SELECT g.goods_id, g.goods_sn, g.goods_name, g.goods_number, g.tienda_number, g.shop_price, p.user_price, g.goods_img FROM `gsm_goods` as g inner join `gsm_member_price` as p on g.goods_id = p.goods_id where user_rank in (2,3 ) order by g.goods_id asc";
-            string sql = "SELECT g.goods_id, g.goods_sn, g.goods_name, g.goods_number, g.tienda_number, g.shop_price, g.shop_price,p.user_price, p.user_price, g.goods_img FROM `gsm_goods` as g left join `gsm_member_price` as p on g.goods_id = p.goods_id order by g.goods_id asc";
+            string sql = @"SELECT g.goods_id,g.goods_sn, g.goods_name, g.goods_number, g.tienda_number, g.shop_price,
+                    sum(CASE p.user_rank WHEN 2 then p.user_price else 0 end) as vip_price,
+                    sum(CASE p.user_rank WHEN 3 then p.user_price else 0 end) as wholesale_price,
+                    g.goods_img FROM `gsm_goods` as g 
+                    LEFT JOIN    `gsm_member_price` as p on g.goods_id = p.goods_id
+					group by g.goods_sn
+                    order by g.goods_id asc";
             //string sql = "SELECT gsm_goods.goods_id, gsm_goods.goods_sn, gsm_goods.goods_name, gsm_goods.goods_number, gsm_goods.tienda_number, gsm_goods.shop_price, gsm_member_price.user_price, gsm_goods.goods_img FROM `gsm_goods`,`gsm_member_price` WHERE gsm_goods.goods_id=gsm_member_price.goods_id order by gsm_goods.goods_id asc LIMIT 24";
             //string sql = "SELECT * FROM `gsm_category` ORDER BY `gsm_category`.`cat_id` ASC";
             return MySqlHelper.ExecuteDataset(AppSetting.ServerConnectionString, sql);
@@ -32,8 +38,6 @@ namespace GSMLanTe.POS.DAL
             sb.Append("g.goods_number=@GoodsNumber,");
             sb.Append("g.tienda_number=@TiendaNumber,");
             sb.Append("g.shop_price=@ShopPrice ");
-           // sb.Append("p.user_price=@UserPrice,");
-            //sb.Append("g.goods_name=@GoodsName");
             sb.Append("where g.goods_id=@GoodsId and g.goods_sn=@GoodsNo");
             string sql = sb.ToString();
             MySqlParameter[] pars = {
@@ -43,7 +47,7 @@ namespace GSMLanTe.POS.DAL
                 new MySqlParameter("@GoodsNumber",goods.PCS),
                 new MySqlParameter("@TiendaNumber",goods.StorePCS),
                 new MySqlParameter("@ShopPrice",goods.Price),
-                new MySqlParameter("@UserPrice",goods.VipPrice),
+                new MySqlParameter("@VipPrice",goods.VipPrice),
                 //new MySqlParameter("@UserPrice",goods.WholesalePrice),
             };
             var result = MySqlHelper.ExecuteNonQuery(AppSetting.ServerConnectionString, sql, pars);

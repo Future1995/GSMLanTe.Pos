@@ -58,29 +58,27 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvWebGoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWebGoods.Location = new System.Drawing.Point(1, 52);
-            this.dgvWebGoods.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvWebGoods.Location = new System.Drawing.Point(1, 42);
+            this.dgvWebGoods.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvWebGoods.Name = "dgvWebGoods";
             this.dgvWebGoods.RowTemplate.Height = 27;
-            this.dgvWebGoods.Size = new System.Drawing.Size(972, 850);
+            this.dgvWebGoods.Size = new System.Drawing.Size(729, 680);
             this.dgvWebGoods.TabIndex = 0;
             this.dgvWebGoods.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWebGoods_CellContentClick);
             this.dgvWebGoods.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWebGoods_CellEndEdit);
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(267, 19);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Location = new System.Drawing.Point(200, 15);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(261, 25);
+            this.txtSearch.Size = new System.Drawing.Size(197, 21);
             this.txtSearch.TabIndex = 2;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(561, 21);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Location = new System.Drawing.Point(421, 17);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(128, 25);
+            this.btnSearch.Size = new System.Drawing.Size(96, 20);
             this.btnSearch.TabIndex = 18;
             this.btnSearch.Text = "搜  索";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -88,10 +86,9 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(709, 20);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReset.Location = new System.Drawing.Point(532, 16);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(113, 25);
+            this.btnReset.Size = new System.Drawing.Size(85, 20);
             this.btnReset.TabIndex = 19;
             this.btnReset.Text = "重  载";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -99,11 +96,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1021, 79);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(766, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 20;
             this.label1.Text = "编号：";
             // 
@@ -111,10 +108,9 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1021, 141);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(766, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 21;
             this.label2.Text = "名称：";
             // 
@@ -122,10 +118,9 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1021, 221);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(766, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 22;
             this.label3.Text = "库存：";
             // 
@@ -133,10 +128,9 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1021, 281);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(766, 225);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 15);
+            this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 23;
             this.label4.Text = "店存：";
             // 
@@ -144,10 +138,9 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1021, 344);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(766, 275);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 15);
+            this.label5.Size = new System.Drawing.Size(41, 12);
             this.label5.TabIndex = 24;
             this.label5.Text = "单价：";
             // 
@@ -155,10 +148,9 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1013, 404);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(760, 323);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 15);
+            this.label6.Size = new System.Drawing.Size(47, 12);
             this.label6.TabIndex = 25;
             this.label6.Text = "VIP价：";
             // 
@@ -166,20 +158,18 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1001, 485);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(751, 388);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 15);
+            this.label7.Size = new System.Drawing.Size(65, 12);
             this.label7.TabIndex = 26;
             this.label7.Text = "图片展示：";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(980, 504);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(735, 403);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(348, 275);
+            this.pictureBox1.Size = new System.Drawing.Size(261, 220);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
@@ -187,64 +177,57 @@
             // txtNo
             // 
             this.txtNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNo.Location = new System.Drawing.Point(1076, 68);
-            this.txtNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNo.Location = new System.Drawing.Point(807, 54);
             this.txtNo.Name = "txtNo";
-            this.txtNo.Size = new System.Drawing.Size(251, 25);
+            this.txtNo.Size = new System.Drawing.Size(189, 21);
             this.txtNo.TabIndex = 28;
             // 
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.Location = new System.Drawing.Point(1076, 122);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Location = new System.Drawing.Point(807, 98);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(251, 58);
+            this.txtName.Size = new System.Drawing.Size(189, 47);
             this.txtName.TabIndex = 29;
             // 
             // txtPCS
             // 
             this.txtPCS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPCS.Location = new System.Drawing.Point(1076, 210);
-            this.txtPCS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPCS.Location = new System.Drawing.Point(807, 168);
             this.txtPCS.Name = "txtPCS";
-            this.txtPCS.Size = new System.Drawing.Size(251, 25);
+            this.txtPCS.Size = new System.Drawing.Size(189, 21);
             this.txtPCS.TabIndex = 30;
             // 
             // txtStorePCS
             // 
             this.txtStorePCS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStorePCS.Location = new System.Drawing.Point(1076, 270);
-            this.txtStorePCS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStorePCS.Location = new System.Drawing.Point(807, 216);
             this.txtStorePCS.Name = "txtStorePCS";
-            this.txtStorePCS.Size = new System.Drawing.Size(251, 25);
+            this.txtStorePCS.Size = new System.Drawing.Size(189, 21);
             this.txtStorePCS.TabIndex = 31;
             // 
             // txtPrice
             // 
             this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrice.Location = new System.Drawing.Point(1076, 332);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Location = new System.Drawing.Point(807, 266);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(251, 25);
+            this.txtPrice.Size = new System.Drawing.Size(189, 21);
             this.txtPrice.TabIndex = 32;
             // 
             // txtVipPrice
             // 
             this.txtVipPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtVipPrice.Location = new System.Drawing.Point(1076, 392);
-            this.txtVipPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtVipPrice.Location = new System.Drawing.Point(807, 314);
             this.txtVipPrice.Name = "txtVipPrice";
-            this.txtVipPrice.Size = new System.Drawing.Size(251, 25);
+            this.txtVipPrice.Size = new System.Drawing.Size(189, 21);
             this.txtVipPrice.TabIndex = 33;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(849, 21);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(637, 17);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(115, 25);
+            this.btnExit.Size = new System.Drawing.Size(86, 20);
             this.btnExit.TabIndex = 34;
             this.btnExit.Text = "关 闭";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -252,9 +235,9 @@
             // 
             // GoodsWeb
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 916);
+            this.ClientSize = new System.Drawing.Size(1008, 733);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtVipPrice);
             this.Controls.Add(this.txtPrice);
@@ -275,7 +258,6 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgvWebGoods);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GoodsWeb";
             this.Text = "蓝特线上价格表";
             this.Load += new System.EventHandler(this.GoodsWeb_Load);
